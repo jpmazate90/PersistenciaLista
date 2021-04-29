@@ -15,11 +15,12 @@ import com.mycompany.lab5.Listas.Nodo;
 public class Burbuja {
 
     public static void ordenarBurbuja(Lista lista) {
-        Nodo aux = lista.getInicio();
+        Nodo aux ;
         double pivote;
         boolean cambios = false;
         while (true) {
             cambios = false;
+            aux = lista.getInicio();
             while (aux != null) {
                 if (aux.getSiguiente() != null) {
                     if (aux.getDato() > aux.getSiguiente().getDato()) {
@@ -29,11 +30,13 @@ public class Burbuja {
                         cambios = true;
                     }
                 }
+                
                 aux = aux.getSiguiente();
             }
             if(!cambios){
                 break;
             }
+            
         }
     }
 
